@@ -17,3 +17,12 @@ end
 get '/contacts' do
 	erb :contacts
 end
+
+post '/visit' do
+	@username = params[:username]
+	@phone = params[:phone]
+	@datetime = params[:datetime]
+	@barber = params[:barber]
+	erb "Отлично! #{@username}, мастер #{@barber} будет ждать Вас #{@datetime}. 
+	Если что-то поменяется, мы с Вами свяжемся по телефону #{@phone}. Хорошего дня! "
+end
