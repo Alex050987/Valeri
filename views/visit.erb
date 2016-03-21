@@ -4,7 +4,7 @@
 <form action="/visit" method="POST" role="form">
 
   <div class="form-group">
-    <label>Ваше имя</label>
+    <label>Как Вас зовут? (как можно к Вам обращаться?)</label>
     <input name="username" type="text" class="form-control" placeholder="Ваше имя">
   </div>
 
@@ -18,6 +18,16 @@
     <input name="datetime" type="text" class="form-control" placeholder="Введите дату и время">
   </div>
 
+  <div class="form-group">
+    <label>Выберите парикмахера</label>
+    <select class="form-control">
+      <option>Катя</option>
+      <option>Лиля</option>
+      <option>Марина</option>
+  </select>
+  </div>
+
+  <p> </p>
   <button type="submit" class="btn btn-primary">Записаться</button>
 
 </form>
