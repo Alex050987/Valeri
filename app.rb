@@ -27,9 +27,19 @@ post '/visit' do
 
 	if @username == ''
 		@error = 'Введите имя'
-		return erb :visit
 	end
 
+	if @phone == ''
+		@error = 'Введите номер телефона'
+	end
+
+	if @datetime == ''
+		@error = 'Укажите дату и время'
+	end
+
+	if @error != ''
+		return erb :visit
+	end
 
 	erb "Отлично! #{@username}, мастер #{@barber} будет ждать Вас #{@datetime}. Цвет краски #{@color} !
 	Если что-то поменяется, мы с Вами свяжемся по телефону #{@phone}. Хорошего дня! "
