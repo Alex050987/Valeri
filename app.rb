@@ -23,6 +23,7 @@ post '/visit' do
 	@phone = params[:phone]
 	@datetime = params[:datetime]
 	@barber = params[:barber]
-	erb "Отлично! #{@username}, мастер #{@barber} будет ждать Вас #{@datetime}. 
+	@color = params[:color]
+	erb "Отлично! #{@username}, мастер #{@barber} будет ждать Вас #{@datetime}. Цвет краски #{@color} !
 	Если что-то поменяется, мы с Вами свяжемся по телефону #{@phone}. Хорошего дня! "
 end
